@@ -106,6 +106,7 @@ class ResetPasswordPhoneNumber extends StatelessWidget {
               ),
             ],
           ),
-        ));
+        )
+        );
   }
 }

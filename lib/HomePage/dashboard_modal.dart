@@ -13,15 +13,7 @@ class DashboardModal extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: const Color(0xff7DB9B6),
-          actions: [
-            IconButton(
-              color: Colors.black,
-              icon: const Icon(Icons.menu),
-              onPressed: () {
-                // Handle menu button press
-              },
-            ),
-          ],
+          
         ),
         body: Center(
           child: Container(
