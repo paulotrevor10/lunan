@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lunan/ForgotPassword/forgot_password.dart';
-import 'package:lunan/HomePage/dashboard.dart';
+import 'package:lunan/HomePage/dashboard_modal.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key});
@@ -57,7 +57,7 @@ class LoginPage extends StatelessWidget {
                   );
                 },
                 child: const Text(
-                  'Forgot Passsssword?',
+                  'Forgot Password?',
                   style: TextStyle(color: Color(0xff4D455D)),
                 ),
               ),
@@ -72,7 +72,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (_) => const Dashboard()),
+                      MaterialPageRoute(builder: (_) => const DashboardModal()),
                     );
                   },
                   child: const Text(
