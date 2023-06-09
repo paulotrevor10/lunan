@@ -1,36 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/MenuList/menulist.dart';
+import 'package:lunan/Patient/HomePage/WeeklyForms/weekly_forms_answer.dart';
+import 'package:lunan/Patient/MenuList/menulist.dart';
 
-class WellnessForms extends StatelessWidget {
-  const WellnessForms ({super.key});
+class WeeklyForms extends StatelessWidget {
+  const WeeklyForms({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(  
-    backgroundColor: const Color(0xffF5E9CF), // Set the background color
+    return Scaffold(
+      backgroundColor: const Color(0xffF5E9CF), // Set the background color
       appBar: AppBar(
-      
-      automaticallyImplyLeading: false,
+        automaticallyImplyLeading: false,
         backgroundColor: const Color(0xff7DB9B6),
-      
-        
-      
       ),
-      
+
       endDrawer: Drawer(
         child: MenuList(),
       ),
-      
+
       body: Center(
         child: Column(
           children: <Widget>[
             Container(
               margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
               child: const Text(
-                'View Wellness Forms',
+                'View Weekly Forms',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
                   fontFamily: 'Montserrat',
                   fontSize: 30,
                   color: Color(0xff4D455D),
@@ -42,7 +38,15 @@ class WellnessForms extends StatelessWidget {
               thickness: 2, // Adjust the thickness of the line
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                     builder: (context) => const WeeklyFormsAnswer()
+                    ),
+                );
+              
+              },
               child: Container(
                 margin: const EdgeInsets.all(10),
                 height: 80,
@@ -63,12 +67,9 @@ class WellnessForms extends StatelessWidget {
                     )),
               ),
             ),
-          
           ],
         ),
-      
       ),
-    
     );
   }
 }

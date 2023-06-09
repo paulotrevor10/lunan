@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/ForgotPassword/forgot_password.dart';
-import 'package:lunan/HomePage/dashboard_modal.dart';
+import 'package:lunan/Patient/ForgotPassword/forgot_password.dart';
+import 'package:lunan/Patient/HomePage/dashboard_modal.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key});
@@ -81,8 +81,26 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 130,
+              Container(
+                height: 50,
+                width: 250,
+               margin: const EdgeInsets.all(30),
+                decoration: BoxDecoration(
+                  color: const Color(0xff7DB9B6),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const DashboardModal()),
+                    );
+                  },
+                  child: const Text(
+                    'Login as therashit',
+                    style: TextStyle(color: Colors.white, fontSize: 25),
+                  ),
+                ),
               ),
             ],
           ),

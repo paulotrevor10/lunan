@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/MenuList/menulist.dart';
+import 'package:lunan/Patient/MenuList/menulist.dart';
 
 class WellnessGuide extends StatelessWidget {
   const WellnessGuide({super.key});

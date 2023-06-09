@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/MenuList/menulist.dart';
+import 'package:lunan/Patient/MenuList/menulist.dart';
 
-class Assignment extends StatelessWidget {
-  const Assignment({super.key});
+class WellnessForms extends StatelessWidget {
+  const WellnessForms ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class Assignment extends StatelessWidget {
             Container(
               margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
               child: const Text(
-                'Assignments',
+                'View Wellness Forms',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -55,7 +55,7 @@ class Assignment extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.only(left: 16),
                       child: Text(
-                        'Activity # 1',
+                        'Wellness Form # 1 \nDate Submitted :',
                         style: TextStyle(
                           color: Colors.white,
                         ),

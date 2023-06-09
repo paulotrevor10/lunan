@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/ForgotPassword/reset_password_phone_number.dart';
-import 'package:lunan/SignIn/log_in.dart';
+import 'package:lunan/Patient/ForgotPassword/reset_password_phone_number.dart';
+import 'package:lunan/Patient/SignIn/log_in.dart';
 
 import 'package:pin_code_fields/pin_code_fields.dart';
 

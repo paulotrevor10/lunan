@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/ForgotPassword/forgot_password_phone_number.dart';
-import 'package:lunan/ForgotPassword/forgot_password_success.dart';
+import 'package:lunan/Patient/ForgotPassword/forgot_password.dart';
+import 'package:lunan/Patient/ForgotPassword/forgot_password_otp.dart';
 
 //Forgot Password Page
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+class ForgotPasswordPhoneMethod extends StatelessWidget {
+  const ForgotPasswordPhoneMethod({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class ForgotPassword extends StatelessWidget {
             Container(
               margin: const EdgeInsets.all(10),
               child: const Text(
-                'Enter the email address \nassociated with your account.',
+                'Enter your mobile phone \n number to reset password.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -55,7 +55,7 @@ class ForgotPassword extends StatelessWidget {
             Container(
               margin: const EdgeInsets.all(5),
               child: const Text(
-                'We will email you a link to\n reset your password.',
+                'We will send you a OTP code',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Montserrat',
@@ -71,7 +71,7 @@ class ForgotPassword extends StatelessWidget {
                 keyboardType: TextInputType
                     .emailAddress, // Set input type to email address
                 decoration: InputDecoration(
-                    hintText: 'Enter your email address',
+                    hintText: 'Enter Number',
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
@@ -93,7 +93,7 @@ class ForgotPassword extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ForgotPasswordSuccess()),
+                          builder: (context) => const ForgotPassMobileOtp()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -114,13 +114,14 @@ class ForgotPassword extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) =>
-                            const ForgotPasswordPhoneMethod()),
+                        builder: (context) => const ForgotPassword()),
                   );
                 },
-                child: const Text('Use mobile phone number instead'),
+                child: const Text(
+                    textAlign: TextAlign.center,
+                    'Use email method to reset \n password instead'),
               ),
-            ),
+            )
           ]),
         ),
       ),
