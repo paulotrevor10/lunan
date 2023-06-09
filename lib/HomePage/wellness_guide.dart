@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/HomePage/assignment.dart';
-import 'package:lunan/HomePage/WeeklyForms/weekly_forms.dart';
-import 'package:lunan/HomePage/wellness_form.dart';
-import 'package:lunan/HomePage/wellness_guide.dart';
 import 'package:lunan/MenuList/menulist.dart';
 
-
-class Dashboard extends StatelessWidget {
-  const Dashboard({super.key});
+class WellnessGuide extends StatelessWidget {
+  const WellnessGuide({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xffF5E9CF), // Set the background color
+    return Scaffold(  
+    backgroundColor: const Color(0xffF5E9CF), // Set the background color
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+      
+      automaticallyImplyLeading: false,
         backgroundColor: const Color(0xff7DB9B6),
+      
+        
+      
       ),
-      // Add the drawer for the menu
+      
       endDrawer: Drawer(
         child: MenuList(),
       ),
+      
       body: SingleChildScrollView(
           child: Center(
         child: Column(children: <Widget>[
@@ -28,16 +28,16 @@ class Dashboard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
-                margin: const EdgeInsets.fromLTRB(20, 70, 20, 20),
+                margin: const EdgeInsets.fromLTRB(20, 50, 20, 20),
                 width: 150,
                 height: 150,
                 child: ElevatedButton(
                     onPressed: () {
-                       Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const WeeklyForms()),
-                      );
+                      //  Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //       builder: (context) => const WeeklyForms()),
+                      // );
                     
                     },
                     style: ElevatedButton.styleFrom(
@@ -51,23 +51,23 @@ class Dashboard extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text('Weekly Forms'),
+                          child: const Text('YouTube'),
                         ),
-                        Image.asset('assets/iconEdit.png'),
+                       
                       ],
                     )),
               ),
               Container(
-                margin: const EdgeInsets.fromLTRB(20, 70, 20, 20),
+                margin: const EdgeInsets.fromLTRB(20, 50, 20, 20),
                 width: 150,
                 height: 150,
                 child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const WellnessForms()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //       builder: (context) => const WellnessForms()),
+                      // );
                      
                     },
                     style: ElevatedButton.styleFrom(
@@ -81,9 +81,9 @@ class Dashboard extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text('Wellness Forms'),
+                          child: const Text('YouTube'),
                         ),
-                        Image.asset('assets/iconEdit2.png'),
+                       
                       ],
                     )),
               ),
@@ -98,11 +98,11 @@ class Dashboard extends StatelessWidget {
                 height: 150,
                 child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Assignment()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //       builder: (context) => const Assignment()),
+                      // );
                     
                     },
                     style: ElevatedButton.styleFrom(
@@ -116,9 +116,9 @@ class Dashboard extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text('Assignments'),
+                          child: const Text('YouTube'),
                         ),
-                        Image.asset('assets/iconTaskSquare.png'),
+                       
                       ],
                     )),
               ),
@@ -129,11 +129,11 @@ class Dashboard extends StatelessWidget {
                 child: ElevatedButton(
                     onPressed: () {
                     
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const WellnessGuide()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //       builder: (context) => const WellnessGuide()),
+                      // );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff7DB9B6),
@@ -146,9 +146,9 @@ class Dashboard extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text('Wellness Guide'),
+                          child: const Text('YouTube'),
                         ),
-                        Image.asset('assets/iconBookSaved.png'),
+                    
                       ],
                     )),
               ),
@@ -174,9 +174,32 @@ class Dashboard extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text('Schedule'),
+                          child: const Text('YouTube'),
                         ),
-                        Image.asset('assets/iconCalendar.png'),
+                        
+                      ],
+                    )),
+              ),
+              Container(
+                margin: const EdgeInsets.all(20),
+                width: 150,
+                height: 150,
+                child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff7DB9B6),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(
+                            15), // Set the corner radius here
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
+                          child: const Text('YouTube'),
+                        ),
+                        
                       ],
                     )),
               )
@@ -184,12 +207,7 @@ class Dashboard extends StatelessWidget {
           )
         ]),
       )),
-
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xff7DB9B6),
-        onPressed: () {},
-        child: const Icon(Icons.messenger),
-      ),
+    
     );
   }
 }
