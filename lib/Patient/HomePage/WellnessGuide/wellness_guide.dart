@@ -9,8 +9,7 @@ class WellnessGuide extends StatelessWidget {
     return Scaffold(  
     backgroundColor: const Color(0xffF5E9CF), // Set the background color
       appBar: AppBar(
-      
-      automaticallyImplyLeading: false,
+    
         backgroundColor: const Color(0xff7DB9B6),
       
         

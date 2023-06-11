@@ -19,7 +19,7 @@ class WeeklyFormsAnswer extends StatelessWidget {
         child: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            margin: const EdgeInsets.all(20),
+            margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: const Color(0xff7DB9B6),
               borderRadius: BorderRadius.circular(20),
