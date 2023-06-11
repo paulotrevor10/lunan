@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/HomePage/assignment.dart';
-import 'package:lunan/HomePage/WeeklyForms/weekly_forms.dart';
-import 'package:lunan/HomePage/wellness_form.dart';
-import 'package:lunan/HomePage/wellness_guide.dart';
-import 'package:lunan/MenuList/menulist.dart';
+import 'package:lunan/Patient/HomePage/assignment.dart';
+import 'package:lunan/Patient/HomePage/WeeklyForms/weekly_forms.dart';
+import 'package:lunan/Patient/HomePage/wellness_form.dart';
+import 'package:lunan/Patient/HomePage/wellness_guide.dart';
+import 'package:lunan/Patient/MenuList/menulist.dart';
 
 
 class Dashboard extends StatelessWidget {

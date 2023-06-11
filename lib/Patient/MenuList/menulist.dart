@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/HomePage/dashboard.dart';
-import 'package:lunan/ProfileSetting/profile.dart';
-import 'package:lunan/SignIn/log_in.dart';
+import 'package:lunan/Patient/HomePage/dashboard.dart';
+import 'package:lunan/Patient/ProfileSetting/profile.dart';
+import 'package:lunan/Patient/SignIn/log_in.dart';
 
 class MenuList extends StatelessWidget {
   @override

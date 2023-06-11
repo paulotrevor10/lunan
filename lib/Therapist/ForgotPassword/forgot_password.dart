@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/ForgotPassword/reset_password_phone_number.dart';
-import 'package:lunan/SignIn/log_in.dart';
+import 'package:lunan/Therapist/ForgotPassword/forgot_password_phone_number.dart';
+import 'package:lunan/Therapist/ForgotPassword/forgot_password_success.dart';
 
-import 'package:pin_code_fields/pin_code_fields.dart';
-
-class ForgotPassMobileOtp extends StatelessWidget {
-  const ForgotPassMobileOtp({super.key});
+//Forgot Password Page
+class ForgotPassword extends StatelessWidget {
+  const ForgotPassword({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +15,7 @@ class ForgotPassMobileOtp extends StatelessWidget {
         backgroundColor: const Color(0xffF5E9CF),
         iconTheme: const IconThemeData(color: Color(0xff4D455D)),
       ),
+
       body: SingleChildScrollView(
         child: Center(
           child: Column(children: <Widget>[
@@ -42,7 +42,7 @@ class ForgotPassMobileOtp extends StatelessWidget {
             Container(
               margin: const EdgeInsets.all(10),
               child: const Text(
-                'We send you a OTP code to\nyour mobile phone number',
+                'Enter the email address \nassociated with your account.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -55,7 +55,7 @@ class ForgotPassMobileOtp extends StatelessWidget {
             Container(
               margin: const EdgeInsets.all(5),
               child: const Text(
-                'Enter 4 digit code',
+                'We will email you a link to\n reset your password.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'Montserrat',
@@ -65,27 +65,24 @@ class ForgotPassMobileOtp extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.fromLTRB(50, 30, 50, 30),
-              child: PinCodeTextField(
-                cursorColor: const Color(0xff4D455D),
-                appContext: context,
-                length: 4, // Specify the length of the OTP code
+              width: 350,
+              margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+              child: TextField(
+                keyboardType: TextInputType
+                    .emailAddress, // Set input type to email address
+                decoration: InputDecoration(
+                    hintText: 'Enter your email address',
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(color: Color(0xff7DB9B6)),
+                        borderRadius: BorderRadius.circular(20))),
+
                 onChanged: (value) {
-                  // Handle OTP code changes
+                  // Handle changes in the input
                 },
-                onCompleted: (value) {
-                  // Handle OTP code completion
-                },
-                pinTheme: PinTheme(
-                  shape: PinCodeFieldShape.box,
-                  borderRadius: BorderRadius.circular(8.0),
-                  fieldHeight: 50,
-                  fieldWidth: 50,
-                  activeColor: const Color(0xff7DB9B6),
-                  selectedColor: const Color(0xff7DB9B6),
-                  inactiveColor: const Color(0xff7DB9B6),
-                  borderWidth: 2,
-                ),
               ),
             ),
             Container(
@@ -96,7 +93,7 @@ class ForgotPassMobileOtp extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ResetPasswordPhoneNumber()),
+                          builder: (context) => const ForgotPasswordSuccess()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -116,15 +113,14 @@ class ForgotPassMobileOtp extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()),
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            const ForgotPasswordPhoneMethod()),
                   );
                 },
-                child: const Text(
-                  textAlign: TextAlign.center,
-                  'Use email method to reset \n password instead',
-                ),
+                child: const Text('Use mobile phone number instead'),
               ),
-            )
+            ),
           ]),
         ),
       ),
