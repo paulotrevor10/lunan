@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/Patient/HomePage/assignment.dart';
+import 'package:lunan/Patient/HomePage/Assignment/assignment.dart';
 import 'package:lunan/Patient/HomePage/WeeklyForms/weekly_forms.dart';
-import 'package:lunan/Patient/HomePage/wellness_form.dart';
+import 'package:lunan/Patient/HomePage/WellnessForms/wellness_form.dart';
 import 'package:lunan/Patient/HomePage/wellness_guide.dart';
 import 'package:lunan/Therapist/MenuList/menulist.dart';
 
