@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lunan/Patient/MenuList/menulist.dart';
 
-class WeeklyFormsAnswer extends StatelessWidget {
-  const WeeklyFormsAnswer({super.key});
+class WellnessFormsAnswer extends StatelessWidget {
+  const WellnessFormsAnswer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class WeeklyFormsAnswer extends StatelessWidget {
                         child: Container(
                           margin: const EdgeInsets.only(top: 10),
                           child: const Text(
-                            'Weeekly Form # 1',
+                            'Wellness Form # 1',
                             style: TextStyle(
                               fontSize: 30,
                               color: Colors.white,

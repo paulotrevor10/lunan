@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lunan/Patient/HomePage/WellnessForms/wellness_forms_answer.dart';
 import 'package:lunan/Patient/MenuList/menulist.dart';
 
 class WellnessForms extends StatelessWidget {
@@ -10,7 +11,7 @@ class WellnessForms extends StatelessWidget {
     backgroundColor: const Color(0xffF5E9CF), // Set the background color
       appBar: AppBar(
       
-      automaticallyImplyLeading: false,
+     
         backgroundColor: const Color(0xff7DB9B6),
       
         
@@ -42,7 +43,14 @@ class WellnessForms extends StatelessWidget {
               thickness: 2, // Adjust the thickness of the line
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                     builder: (context) => const WellnessFormsAnswer()
+                    ),
+                );
+              },
               child: Container(
                 margin: const EdgeInsets.all(10),
                 height: 80,
