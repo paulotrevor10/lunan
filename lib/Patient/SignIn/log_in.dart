@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lunan/Patient/ForgotPassword/forgot_password.dart';
-import 'package:lunan/Patient/HomePage/dashboard_modal.dart';
+import 'package:lunan/Patient/HomePage/Dashboard/dashboard_modal.dart';
 import 'package:lunan/Therapist/HomePage/dashboard_modal.dart';
 
 class LoginPage extends StatelessWidget {

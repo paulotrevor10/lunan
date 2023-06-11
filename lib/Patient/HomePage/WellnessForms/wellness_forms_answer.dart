@@ -16,10 +16,11 @@ class WellnessFormsAnswer extends StatelessWidget {
       ),
       body: Center(
           child: SingleChildScrollView(
+              child: Expanded(
         child: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            margin: const EdgeInsets.all(20),
+            margin: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: const Color(0xff7DB9B6),
               borderRadius: BorderRadius.circular(20),
@@ -65,39 +66,33 @@ class WellnessFormsAnswer extends StatelessWidget {
                     Expanded(
                         child: Container(
                       margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-                      decoration: const BoxDecoration(
-                        color:  Color(0xffF5E9CF)
-                        
-                      ),
+                      decoration: const BoxDecoration(color: Color(0xffF5E9CF)),
                     )),
-                    
-                     Container(
-                 
-                  child: ElevatedButton(
-                      onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //       builder: (context) => const ()),
-                        // );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff7DB97F),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                              10), // Set the corner radius here
-                        ),
-                      ),
-                      child: const Text(
-                        'Okay',
-                      )),
-                ),
+                    Container(
+                      child: ElevatedButton(
+                          onPressed: () {
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //       builder: (context) => const ()),
+                            // );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xff7DB97F),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                  10), // Set the corner radius here
+                            ),
+                          ),
+                          child: const Text(
+                            'Okay',
+                          )),
+                    ),
                   ]),
                 )),
-               
               ],
             )),
-      )),
+      ))),
     );
   }
 }
