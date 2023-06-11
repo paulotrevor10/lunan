@@ -3,8 +3,8 @@ import 'package:lunan/Therapist/ForgotPassword/forgot_password_phone_number.dart
 import 'package:lunan/Therapist/ForgotPassword/forgot_password_success.dart';
 
 //Forgot Password Page
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
+class ForgotPasswordT extends StatelessWidget {
+  const ForgotPasswordT({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +93,7 @@ class ForgotPassword extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ForgotPasswordSuccess()),
+                          builder: (context) => const ForgotPasswordSuccessT()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
@@ -115,7 +115,7 @@ class ForgotPassword extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
-                            const ForgotPasswordPhoneMethod()),
+                            const ForgotPasswordPhoneMethodT()),
                   );
                 },
                 child: const Text('Use mobile phone number instead'),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lunan/Therapist/HomePage/dashboard.dart';
 import 'package:lunan/Therapist/ProfileSetting/profile.dart';
-import 'package:lunan/Therapist/SignIn/log_in.dart';
+import 'package:lunan/Patient/SignIn/log_in.dart';
 
-class MenuList extends StatelessWidget {
+class MenuListT extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -37,7 +37,7 @@ class MenuList extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const Dashboard()),
+              MaterialPageRoute(builder: (context) => const DashboardT()),
             );
           },
         ),
@@ -50,7 +50,7 @@ class MenuList extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const ProfileSetting()),
+              MaterialPageRoute(builder: (context) => const ProfileSettingT()),
             );
           },
         ),

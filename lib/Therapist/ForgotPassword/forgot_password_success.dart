@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/Therapist/SignIn/log_in.dart';
+import 'package:lunan/Patient/SignIn/log_in.dart';
 
 
 void main() => runApp(const MaterialApp(
-      home: ForgotPasswordSuccess(),
+      home: ForgotPasswordSuccessT(),
     ));
 
-class ForgotPasswordSuccess extends StatelessWidget {
-  const ForgotPasswordSuccess({super.key});
+class ForgotPasswordSuccessT extends StatelessWidget {
+  const ForgotPasswordSuccessT({super.key});
 
   @override
   Widget build(BuildContext context) {

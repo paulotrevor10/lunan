@@ -4,6 +4,7 @@ import 'package:lunan/Patient/HomePage/WeeklyForms/weekly_forms.dart';
 import 'package:lunan/Patient/HomePage/wellness_form.dart';
 import 'package:lunan/Patient/HomePage/wellness_guide.dart';
 import 'package:lunan/Patient/MenuList/menulist.dart';
+import 'package:lunan/Patient/HomePage/chat.dart';
 
 
 class Dashboard extends StatelessWidget {
@@ -187,7 +188,14 @@ class Dashboard extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color(0xff7DB9B6),
-        onPressed: () {},
+       onPressed: () {
+                    
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => chat()),
+                      );
+                    },
         child: const Icon(Icons.messenger),
       ),
     );
