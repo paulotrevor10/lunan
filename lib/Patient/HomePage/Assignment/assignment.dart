@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lunan/Patient/HomePage/Assignment/patient_turn_in.dart';
 import 'package:lunan/Patient/MenuList/menulist.dart';
 
 class Assignment extends StatelessWidget {
@@ -9,8 +10,7 @@ class Assignment extends StatelessWidget {
     return Scaffold(  
     backgroundColor: const Color(0xffF5E9CF), // Set the background color
       appBar: AppBar(
-      
-      automaticallyImplyLeading: false,
+    
         backgroundColor: const Color(0xff7DB9B6),
       
         
@@ -42,7 +42,14 @@ class Assignment extends StatelessWidget {
               thickness: 2, // Adjust the thickness of the line
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                     builder: (context) => const PatientTurnIn()
+                    ),
+                );
+              },
               child: Container(
                 margin: const EdgeInsets.all(10),
                 height: 80,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/Patient/HomePage/dashboard.dart';
+import 'package:lunan/Patient/HomePage/Dashboard/dashboard.dart';
 
 class DashboardModal extends StatelessWidget {
   const DashboardModal();

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/Patient/HomePage/dashboard.dart';
+import 'package:lunan/Patient/HomePage/Dashboard/dashboard.dart';
 import 'package:lunan/Patient/ProfileSetting/profile.dart';
 import 'package:lunan/Patient/SignIn/log_in.dart';
 
