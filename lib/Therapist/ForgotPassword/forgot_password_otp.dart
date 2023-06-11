@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lunan/Therapist/ForgotPassword/reset_password_phone_number.dart';
-import 'package:lunan/Therapist/SignIn/log_in.dart';
+import 'package:lunan/Patient/SignIn/log_in.dart';
 
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class ForgotPassMobileOtp extends StatelessWidget {
-  const ForgotPassMobileOtp({super.key});
+class ForgotPassMobileOtpT extends StatelessWidget {
+  const ForgotPassMobileOtpT({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +96,7 @@ class ForgotPassMobileOtp extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ResetPasswordPhoneNumber()),
+                          builder: (context) => const ResetPasswordPhoneNumberT()),
                     );
                   },
                   style: ElevatedButton.styleFrom(

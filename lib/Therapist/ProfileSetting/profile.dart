@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lunan/Therapist/HomePage/dashboard.dart';
 
-class ProfileSetting extends StatelessWidget {
-  const ProfileSetting({super.key});
+class ProfileSettingT extends StatelessWidget {
+  const ProfileSettingT({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -157,7 +157,7 @@ class ProfileSetting extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Dashboard()),
+                            builder: (context) => const DashboardT()),
                       );
                     },
                     style: ElevatedButton.styleFrom(

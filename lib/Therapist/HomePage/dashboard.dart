@@ -4,10 +4,11 @@ import 'package:lunan/Patient/HomePage/WeeklyForms/weekly_forms.dart';
 import 'package:lunan/Patient/HomePage/WellnessForms/wellness_form.dart';
 import 'package:lunan/Patient/HomePage/wellness_guide.dart';
 import 'package:lunan/Therapist/MenuList/menulist.dart';
+import 'package:lunan/Therapist/HomePage/chat.dart';
 
 
-class Dashboard extends StatelessWidget {
-  const Dashboard({super.key});
+class DashboardT extends StatelessWidget {
+  const DashboardT({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class Dashboard extends StatelessWidget {
       ),
       // Add the drawer for the menu
       endDrawer: Drawer(
-        child: MenuList(),
+        child: MenuListT(),
       ),
       body: SingleChildScrollView(
           child: Center(
@@ -51,7 +52,10 @@ class Dashboard extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text('Weekly Forms'),
+                          child: const Text(
+                            'View\nPatients',
+                            textAlign: TextAlign.center,
+                            ),
                         ),
                         Image.asset('assets/iconEdit.png'),
                       ],
@@ -81,7 +85,10 @@ class Dashboard extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text('Wellness Forms'),
+                          child: const Text(
+                            'View Patient Assignments',
+                            textAlign: TextAlign.center,
+                            ),
                         ),
                         Image.asset('assets/iconEdit2.png'),
                       ],
@@ -116,7 +123,11 @@ class Dashboard extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text('Assignments'),
+                          child: const Text(
+                            'Patient Weekly\nForms',
+                            textAlign: TextAlign.center,
+                            ),
+                            
                         ),
                         Image.asset('assets/iconTaskSquare.png'),
                       ],
@@ -146,7 +157,10 @@ class Dashboard extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text('Wellness Guide'),
+                          child: const Text(
+                            'Patient Wellness Forms',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                         Image.asset('assets/iconBookSaved.png'),
                       ],
@@ -187,7 +201,15 @@ class Dashboard extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color(0xff7DB9B6),
-        onPressed: () {},
+        
+           onPressed: () {
+                    
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>  chatT()),
+                      );
+                    },
         child: const Icon(Icons.messenger),
       ),
     );
