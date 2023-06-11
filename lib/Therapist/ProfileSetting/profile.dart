@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/Patient/HomePage/dashboard.dart';
+import 'package:lunan/Therapist/HomePage/dashboard.dart';
 
 class ProfileSetting extends StatelessWidget {
   const ProfileSetting({super.key});

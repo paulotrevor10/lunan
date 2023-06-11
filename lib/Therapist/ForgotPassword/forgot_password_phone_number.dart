@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/Patient/ForgotPassword/forgot_password.dart';
-import 'package:lunan/Patient/ForgotPassword/forgot_password_otp.dart';
+import 'package:lunan/Therapist/ForgotPassword/forgot_password.dart';
+import 'package:lunan/Therapist/ForgotPassword/forgot_password_otp.dart';
 
 //Forgot Password Page
 class ForgotPasswordPhoneMethod extends StatelessWidget {
