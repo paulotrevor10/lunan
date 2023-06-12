@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/Patient/HomePage/Assignment/assignment.dart';
-import 'package:lunan/Patient/HomePage/WeeklyForms/weekly_forms.dart';
-import 'package:lunan/Patient/HomePage/WellnessForms/wellness_form.dart';
 import 'package:lunan/Patient/HomePage/WellnessGuide/wellness_guide.dart';
+import 'package:lunan/Therapist/HomePage/ViewPatient/patient_list.dart';
+import 'package:lunan/Therapist/HomePage/Assignment/patient_assignment.dart';
 import 'package:lunan/Therapist/MenuList/menulist.dart';
 import 'package:lunan/Therapist/HomePage/chat.dart';
+
 
 
 class DashboardT extends StatelessWidget {
@@ -37,7 +37,7 @@ class DashboardT extends StatelessWidget {
                        Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const WeeklyForms()),
+                            builder: (context) => const ViewPatient ()),
                       );
                     
                     },
@@ -70,7 +70,7 @@ class DashboardT extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const WellnessForms()),
+                            builder: (context) => const AssignmentT()),
                       );
                      
                     },
@@ -108,7 +108,7 @@ class DashboardT extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Assignment()),
+                            builder: (context) => const AssignmentT()),
                       );
                     
                     },
