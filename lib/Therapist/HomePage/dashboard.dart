@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/Patient/HomePage/WellnessGuide/wellness_guide.dart';
 import 'package:lunan/Therapist/HomePage/ViewPatient/patient_list.dart';
-import 'package:lunan/Therapist/HomePage/Assignment/patient_assignment.dart';
+import 'package:lunan/Therapist/HomePage/Assignment/turnedin_assignment.dart';
+import 'package:lunan/Therapist/HomePage/WeeklyForms/patient_list.dart';
+import 'package:lunan/Therapist/HomePage/WellnessForm/patient_list.dart';
 import 'package:lunan/Therapist/MenuList/menulist.dart';
 import 'package:lunan/Therapist/HomePage/chat.dart';
 
@@ -16,18 +17,38 @@ class DashboardT extends StatelessWidget {
       backgroundColor: const Color(0xffF5E9CF), // Set the background color
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        
         backgroundColor: const Color(0xff7DB9B6),
+        
       ),
       // Add the drawer for the menu
       endDrawer: Drawer(
         child: MenuListT(),
+        
       ),
       body: SingleChildScrollView(
           child: Center(
         child: Column(children: <Widget>[
+            Container(
+              margin: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+              child: const Text(
+                'Welcome',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Montserrat',
+                  fontSize: 30,
+                  color: Color(0xff4D455D),
+                  
+                )
+                ,
+              ),
+              
+            ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+               
               Container(
                 margin: const EdgeInsets.fromLTRB(20, 70, 20, 20),
                 width: 150,
@@ -37,7 +58,7 @@ class DashboardT extends StatelessWidget {
                        Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ViewPatient ()),
+                            builder: (context) => const PatientList ()),
                       );
                     
                     },
@@ -70,7 +91,7 @@ class DashboardT extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const AssignmentT()),
+                            builder: (context) => const TurendInAssignment()),
                       );
                      
                     },
@@ -108,7 +129,7 @@ class DashboardT extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const AssignmentT()),
+                            builder: (context) => const PatientWeeklyForms()),
                       );
                     
                     },
@@ -143,7 +164,7 @@ class DashboardT extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const WellnessGuide()),
+                            builder: (context) => const PatientWellnessForms()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
