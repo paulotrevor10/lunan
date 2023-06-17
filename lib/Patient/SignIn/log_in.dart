@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lunan/Patient/ForgotPassword/forgot_password.dart';
+import 'package:lunan/Patient/HomePage/Dashboard/dashboard.dart';
 import 'package:lunan/Patient/HomePage/Dashboard/dashboard_modal.dart';
-import 'package:lunan/Therapist/HomePage/dashboard_modal.dart';
+import 'package:lunan/Therapist/HomePage/dashboard.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key});
@@ -94,7 +95,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (_) => const DashboardModalT()),
+                      MaterialPageRoute(builder: (_) => const DashboardT()),
                     );
                   },
                   child: const Text(

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lunan/Therapist/HomePage/ViewPatient/create_casenotes.dart';
+import 'package:lunan/Therapist/HomePage/ViewPatient/patient_casenotes.dart';
 import 'package:lunan/Therapist/HomePage/ViewPatient/patient_list.dart';
 import 'package:lunan/Therapist/MenuList/menulist.dart';
+import 'package:lunan/Therapist/HomePage/ViewPatient/view_casenotes.dart';
 
 class PatientInfo extends StatelessWidget {
   const PatientInfo({super.key});
@@ -89,7 +92,7 @@ class PatientInfo extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const ViewPatient()),
+                                          const PatientList()),
                                 );
                               },
                               style: ElevatedButton.styleFrom(
@@ -116,7 +119,7 @@ class PatientInfo extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const ViewPatient()),
+                                          const PatientCaseNotes()),
                                 );
                               },
                               style: ElevatedButton.styleFrom(
@@ -143,7 +146,7 @@ class PatientInfo extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const ViewPatient()),
+                                          const CreateCaseNotes()),
                                 );
                               },
                               style: ElevatedButton.styleFrom(

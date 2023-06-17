@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:lunan/Therapist/HomePage/Assignment/turnedin_assignment.dart';
+import 'package:lunan/Therapist/HomePage/Assignment/verified_assignment_patientA.dart';
 import 'package:lunan/Therapist/MenuList/menulist.dart';
 
-class AssignmentT extends StatelessWidget {
-  const AssignmentT({Key? key}) : super(key: key);
+class VerifiedAssignment extends StatelessWidget {
+  const VerifiedAssignment({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +18,13 @@ class AssignmentT extends StatelessWidget {
         child: MenuListT(),
       ),
       body: Center(
-        child: SingleChildScrollView(
-        
-          child: Column(
+          child: SingleChildScrollView(
+        child: Column(
           children: <Widget>[
             Container(
               margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
               child: const Text(
-                'Turned-in\nAssignments',
+                'Verified\nAssignments',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -47,7 +48,12 @@ class AssignmentT extends StatelessWidget {
                     children: [
                       ElevatedButton(
                         onPressed: () {
-                          // Handle "Turned In" button press
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const TurendInAssignment()),
+                          );
                         },
                         child: const Text('Turned In'),
                         style: ElevatedButton.styleFrom(
@@ -56,7 +62,12 @@ class AssignmentT extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {
-                          // Handle "Verified" button press
+                                                      Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const VerifiedAssignment()),
+                            );
                         },
                         child: const Text('Verified'),
                         style: ElevatedButton.styleFrom(
@@ -65,17 +76,41 @@ class AssignmentT extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
+                     Padding(
+              padding: const EdgeInsets.all(20),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Search...',
+                  prefixIcon: Icon(Icons.search),
+                  filled: true,
+                fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+            ),
+                   InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => VerifiedAssignmentPatientA(),
+                          ),
+                        );
+                      },
+                  child: Container(
                     width: 330,
                     height: 80,
                     decoration: BoxDecoration(
                       color: Color.fromARGB(255, 255, 255, 255),
                       borderRadius: BorderRadius.circular(20),
                     ),
-                      padding: const EdgeInsets.fromLTRB(20, 15, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(20, 15, 0, 0),
                     child: Text('Patient Name:\nDate Given:\nHW Name:'),
                   ),
-                   Container(
+                   ),
+                  Container(
                     width: 330,
                     height: 80,
                     margin: const EdgeInsets.fromLTRB(0, 30, 0, 30),
@@ -83,10 +118,10 @@ class AssignmentT extends StatelessWidget {
                       color: Color.fromARGB(255, 255, 255, 255),
                       borderRadius: BorderRadius.circular(20),
                     ),
-                       padding: const EdgeInsets.fromLTRB(20, 15, 0, 0),
-                      child: Text('Patient Name:\nDate Given:\nHW Name:'),
+                    padding: const EdgeInsets.fromLTRB(20, 15, 0, 0),
+                    child: Text('Patient Name:\nDate Given:\nHW Name:'),
                   ),
-                   Container(
+                  Container(
                     width: 330,
                     height: 80,
                     margin: const EdgeInsets.fromLTRB(0, 5, 0, 30),
@@ -94,17 +129,16 @@ class AssignmentT extends StatelessWidget {
                       color: Color.fromARGB(255, 255, 255, 255),
                       borderRadius: BorderRadius.circular(20),
                     ),
-                      padding: const EdgeInsets.fromLTRB(20, 15, 0, 0),
-                      child: Text('Patient Name:\nDate Given:\nHW Name:'),
-
+                    padding: const EdgeInsets.fromLTRB(20, 15, 0, 0),
+                    child: Text('Patient Name:\nDate Given:\nHW Name:'),
                   ),
+                  
                 ],
               ),
             ),
           ],
         ),
-        )
-      ),
+      )),
     );
   }
 }

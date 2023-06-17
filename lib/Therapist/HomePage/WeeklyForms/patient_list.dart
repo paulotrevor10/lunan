@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/Therapist/HomePage/ViewPatient/patient_info.dart';
+import 'package:lunan/Therapist/HomePage/WeeklyForms/turnedin_weeklyforms.dart';
 import 'package:lunan/Therapist/MenuList/menulist.dart';
 
-class PatientList extends StatelessWidget {
-  const PatientList({Key? key}) : super(key: key);
+class PatientWeeklyForms extends StatelessWidget {
+  const PatientWeeklyForms({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class PatientList extends StatelessWidget {
                 Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>  PatientInfo()),
+                            builder: (context) => TurnedINWeeklyFroms()),
                       );
               },
               child: Container(
