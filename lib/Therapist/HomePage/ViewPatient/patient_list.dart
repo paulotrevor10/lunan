@@ -48,11 +48,12 @@ class PatientList extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-                Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>  PatientInfo()),
-                      );
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return const PatientInfo();
+                  },
+                );
               },
               child: Container(
                 margin: const EdgeInsets.all(10),

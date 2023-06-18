@@ -61,7 +61,7 @@ class DashboardT extends StatelessWidget {
             children: [
                
               Container(
-                margin: const EdgeInsets.fromLTRB(20, 70, 20, 20),
+                margin: const EdgeInsets.fromLTRB(0, 70, 0, 0),
                 width: 150,
                 height: 150,
                 child: ElevatedButton(
@@ -94,117 +94,7 @@ class DashboardT extends StatelessWidget {
                     )),
               ),
               Container(
-                margin: const EdgeInsets.fromLTRB(20, 70, 20, 20),
-                width: 150,
-                height: 150,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const TurendInAssignment()),
-                      );
-                     
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xff7DB9B6),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                            15), // Set the corner radius here
-                      ),
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text(
-                            'View Patient Assignments',
-                            textAlign: TextAlign.center,
-                            ),
-                        ),
-                        Image.asset('assets/iconEdit2.png'),
-                      ],
-                    )),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                margin: const EdgeInsets.all(20),
-                width: 150,
-                height: 150,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const PatientWeeklyForms()),
-                      );
-                    
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xff7DB9B6),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                            15), // Set the corner radius here
-                      ),
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text(
-                            'Patient Weekly\nForms',
-                            textAlign: TextAlign.center,
-                            ),
-                            
-                        ),
-                        Image.asset('assets/iconTaskSquare.png'),
-                      ],
-                    )),
-              ),
-              Container(
-                margin: const EdgeInsets.all(20),
-                width: 150,
-                height: 150,
-                child: ElevatedButton(
-                    onPressed: () {
-                    
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const PatientWellnessForms()),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xff7DB9B6),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                            15), // Set the corner radius here
-                      ),
-                    ),
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                          child: const Text(
-                            'Patient Wellness Forms',
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        Image.asset('assets/iconBookSaved.png'),
-                      ],
-                    )),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                margin: const EdgeInsets.all(20),
+                margin: const EdgeInsets.fromLTRB(0, 70, 0, 0),
                 width: 150,
                 height: 150,
                 child: ElevatedButton(
@@ -226,8 +116,11 @@ class DashboardT extends StatelessWidget {
                       ],
                     )),
               )
+              
             ],
-          )
+          ),
+          
+          
         ]),
       )),
 
