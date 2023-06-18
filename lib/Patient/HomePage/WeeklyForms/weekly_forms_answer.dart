@@ -11,7 +11,7 @@ class WeeklyFormsAnswer extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xff7DB9B6),
       ),
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: MenuList(),
       ),
       body: Center(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lunan/Patient/ForgotPassword/forgot_password.dart';
-import 'package:lunan/Patient/HomePage/Dashboard/dashboard.dart';
 import 'package:lunan/Patient/HomePage/Dashboard/dashboard_modal.dart';
 import 'package:lunan/Therapist/HomePage/dashboard.dart';
 
@@ -99,7 +98,7 @@ class LoginPage extends StatelessWidget {
                     );
                   },
                   child: const Text(
-                    'Login as therashit',
+                    'Login as therapist',
                     style: TextStyle(color: Colors.white, fontSize: 25),
                   ),
                 ),

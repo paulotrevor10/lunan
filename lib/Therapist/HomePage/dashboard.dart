@@ -16,15 +16,26 @@ class DashboardT extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffF5E9CF), // Set the background color
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        
         backgroundColor: const Color(0xff7DB9B6),
-        
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => chatT()),
+              );
+            },
+            icon: Icon(
+              Icons.messenger,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
+
       // Add the drawer for the menu
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: MenuListT(),
-        
       ),
       body: SingleChildScrollView(
           child: Center(
@@ -220,19 +231,7 @@ class DashboardT extends StatelessWidget {
         ]),
       )),
 
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xff7DB9B6),
-        
-           onPressed: () {
-                    
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>  chatT()),
-                      );
-                    },
-        child: const Icon(Icons.messenger),
-      ),
+     
     );
   }
 }
