@@ -1,50 +1,55 @@
 import 'package:flutter/material.dart';
-import 'package:lunan/Therapist/HomePage/ViewPatient/create_casenotes.dart';
+import 'package:lunan/Therapist/HomePage/Assignment/turnedin_assignment.dart';
 import 'package:lunan/Therapist/HomePage/ViewPatient/patient_casenotes.dart';
-import 'package:lunan/Therapist/HomePage/ViewPatient/patient_list.dart';
-import 'package:lunan/Therapist/MenuList/menulist.dart';
+import 'package:lunan/Therapist/HomePage/WeeklyForms/patient_list.dart';
+import 'package:lunan/Therapist/HomePage/WellnessForm/patient_list.dart';
 
 class PatientInfo extends StatelessWidget {
-  const PatientInfo({super.key});
+  const PatientInfo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xffF5E9CF), // Set the background color
-      appBar: AppBar(
-        backgroundColor: const Color(0xff7DB9B6),
-      ),
-
-      drawer: Drawer(
-        child: MenuListT(),
-      ),
-
-      body: Center(
-          child: SingleChildScrollView(
-        child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: 300,
-            margin: const EdgeInsets.all(20),
+    return Theme(
+        data: Theme.of(context)
+            .copyWith(dialogBackgroundColor: Colors.transparent),
+        child: Dialog(
+          child: Expanded(
+              child: Container(
+            height: 550,
             decoration: BoxDecoration(
               color: const Color(0xff7DB9B6),
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Column(
+            child: Center(
+                child: Column(
               children: [
                 Align(
                     alignment: Alignment.topCenter,
                     child: Padding(
                         padding: const EdgeInsets.only(left: 16),
                         child: Container(
-                          margin: const EdgeInsets.only(top: 10),
-                          child: const Text(
-                            'Patient Info',
-                            style: TextStyle(
-                              fontSize: 30,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ))),
+                            margin: const EdgeInsets.only(top: 10),
+                            child: Row(
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.only(left: 60),
+                                  child: const Text(
+                                    'Patient Info',
+                                    style: TextStyle(
+                                      fontSize: 30,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                const Spacer(),
+                                IconButton(
+                                  icon: const Icon(Icons.close),
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                )
+                              ],
+                            )))),
                 Expanded(
                     child: Container(
                   margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -67,108 +72,128 @@ class PatientInfo extends StatelessWidget {
                                 ),
                               ),
                             ))),
-                    Padding(
-                        padding: const EdgeInsets.only(right: 200),
-                        child: Container(
-                          margin: const EdgeInsets.only(top: 40),
-                          child: const Text(
-                            'Diagnosis: ',
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Color(0xffF5E9CF),
+                    Container(
+                      width: double.infinity,
+                      margin: const EdgeInsets.fromLTRB(10, 100, 10, 10),
+                      height: 40,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const PatientCaseNotes()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xff7DB9B6),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                  20), // Set the corner radius here
                             ),
                           ),
-                        )),
-                    Row(
-                      children: [
-                        Container(
-                          width: 90,
-                          margin: const EdgeInsets.fromLTRB(10, 40, 5, 0),
-                          height: 40,
-                          child: ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const PatientList()),
-                                );
-                              },
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Color.fromARGB(255, 211, 34, 87),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      20), // Set the corner radius here
-                                ),
-                              ),
-                              child: const Text(
-                                'Back', style: TextStyle(
-                              fontSize: 15,
-                              color: Color(0xffF5E9CF),
-                            ),
-                              )),
-                        ),
-                         Container(
-                          width: 100,
-                          margin: const EdgeInsets.fromLTRB(5, 40, 5, 0),
-                          height: 40,
-                          child: ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const PatientCaseNotes()),
-                                );
-                              },
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xff7DB9B6),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      20), // Set the corner radius here
-                                ),
-                              ),
-                              child: const Text(
-                                'View Case\nNotes', textAlign: TextAlign.center, style: TextStyle(
+                          child: const Text(
+                            'View Case\nNotes',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
                               fontSize: 12,
                               color: Color(0xffF5E9CF),
                             ),
-                              )),
-                        ),
-                         Container(
-                          width: 100,
-                          margin: const EdgeInsets.fromLTRB(5, 40, 5, 0),
-                          height: 45,
-                          child: ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const CreateCaseNotes()),
-                                );
-                              },
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Color.fromARGB(255, 19, 195, 122),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                      20), // Set the corner radius here
-                                ),
-                              ),
-                              child: const Text(
-                                'Create Case\nNotes', textAlign: TextAlign.center, style: TextStyle( 
+                          )),
+                    ),
+                  
+                    Container(
+                      width: double.infinity,
+                      margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      height: 40,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const TurendInAssignment()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(255, 19, 195, 122),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                  20), // Set the corner radius here
+                            ),
+                          ),
+                          child: const Text(
+                            'View Patient\nAssignment',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
                               fontSize: 12,
                               color: Color(0xffF5E9CF),
                             ),
-                              )),
-                        ),
-                      ],
-                    )
+                          )),
+                    ),
+                    Container(
+                      width: double.infinity,
+                      margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      height: 40,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const PatientWeeklyForms()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(255, 19, 195, 122),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                  20), // Set the corner radius here
+                            ),
+                          ),
+                          child: const Text(
+                            'Patient Weekly\nForms',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Color(0xffF5E9CF),
+                            ),
+                          )),
+                    ),
+                    Container(
+                      width: double.infinity,
+                      margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      height: 40,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const PatientWellnessForms()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(255, 19, 195, 122),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                  20), // Set the corner radius here
+                            ),
+                          ),
+                          child: const Text(
+                            'Patient Wellness Form',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Color(0xffF5E9CF),
+                            ),
+                          )),
+                    ),
                   ]),
                 )),
               ],
             )),
-      )),
-    );
+          )),
+        ));
   }
 }

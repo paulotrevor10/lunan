@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lunan/Therapist/HomePage/ViewPatient/create_casenotes.dart';
 import 'package:lunan/Therapist/HomePage/ViewPatient/patient_list.dart';
 import 'package:lunan/Therapist/HomePage/ViewPatient/view_casenotes.dart';
 import 'package:lunan/Therapist/MenuList/menulist.dart';
@@ -98,9 +99,13 @@ class PatientCaseNotes extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
                     child: Text('Patient Name:\nDate Accomplished:'),
                   ),
+                  Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    
                   Container(
                     width: 170,
-                    margin: const EdgeInsets.fromLTRB(150, 5, 0, 10),
+                   
                     height: 40,
                     child: ElevatedButton(
                         onPressed: () {
@@ -119,8 +124,40 @@ class PatientCaseNotes extends StatelessWidget {
                         ),
                         child: const Text(
                           'Back To Patient List',
+                          textAlign: TextAlign.center,
                         )),
                   ),
+                  Container(
+                     
+                      height: 40,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CreateCaseNotes()
+                              )
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color.fromARGB(255, 19, 195, 122),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                  15), // Set the corner radius here
+                            ),
+                          ),
+                          child: const Text(
+                            'Create Case Notes',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Color(0xffF5E9CF),
+                            ),
+                          )),
+                    ),
+                  ],
+                )
                 ],
               ),
             ),
