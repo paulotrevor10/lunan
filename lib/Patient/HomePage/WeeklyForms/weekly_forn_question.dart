@@ -18,7 +18,7 @@ class _WeeklyFormsQuestionState extends State<WeeklyFormsQuestion> {
       appBar: AppBar(
         backgroundColor: const Color(0xff7DB9B6),
       ),
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: MenuList(),
       ),
       body: SingleChildScrollView(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lunan/Therapist/HomePage/WellnessForm/patient_list.dart';
 import 'package:lunan/Therapist/HomePage/WellnessForm/turnedin_wellnessforms.dart';
-import 'package:lunan/Therapist/HomePage/WellnessForm/turnedin_wellnessforms_info.dart';
 import 'package:lunan/Therapist/HomePage/WellnessForm/verified_wellnessforms_info.dart';
 import 'package:lunan/Therapist/MenuList/menulist.dart';
 
@@ -13,10 +12,9 @@ class VerifiedWellnessForms extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffF5E9CF), // Set the background color
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: const Color(0xff7DB9B6),
       ),
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: MenuListT(),
       ),
       body: Center(

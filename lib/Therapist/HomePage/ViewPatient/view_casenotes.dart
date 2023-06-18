@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lunan/Patient/MenuList/menulist.dart';
 import 'package:lunan/Therapist/HomePage/ViewPatient/patient_casenotes.dart';
-import 'package:lunan/Therapist/HomePage/ViewPatient/patient_info.dart';
 
 class ViewCaseNotes extends StatelessWidget {
   const  ViewCaseNotes ({super.key});
@@ -13,7 +12,7 @@ class ViewCaseNotes extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xff7DB9B6),
       ),
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: MenuList(),
       ),
       body: Center(

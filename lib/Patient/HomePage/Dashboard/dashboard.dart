@@ -7,7 +7,6 @@ import 'package:lunan/Patient/HomePage/WellnessGuide/wellness_guide.dart';
 import 'package:lunan/Patient/MenuList/menulist.dart';
 import 'package:lunan/Patient/HomePage/chat.dart';
 
-
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
 
@@ -16,13 +15,28 @@ class Dashboard extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffF5E9CF), // Set the background color
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         backgroundColor: const Color(0xff7DB9B6),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => chat()),
+              );
+            },
+            icon: Icon(
+              Icons.messenger,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
+
       // Add the drawer for the menu
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: MenuList(),
       ),
+
       body: SingleChildScrollView(
           child: Center(
         child: Column(children: <Widget>[
@@ -35,12 +49,11 @@ class Dashboard extends StatelessWidget {
                 height: 150,
                 child: ElevatedButton(
                     onPressed: () {
-                       Navigator.push(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => const WeeklyFormChooser()),
                       );
-                    
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff7DB9B6),
@@ -70,7 +83,6 @@ class Dashboard extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => const WellnessFormChooser()),
                       );
-                     
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff7DB9B6),
@@ -105,7 +117,6 @@ class Dashboard extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => const Assignment()),
                       );
-                    
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xff7DB9B6),
@@ -130,7 +141,6 @@ class Dashboard extends StatelessWidget {
                 height: 150,
                 child: ElevatedButton(
                     onPressed: () {
-                    
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -186,19 +196,6 @@ class Dashboard extends StatelessWidget {
           )
         ]),
       )),
-
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xff7DB9B6),
-       onPressed: () {
-                    
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => chat()),
-                      );
-                    },
-        child: const Icon(Icons.messenger),
-      ),
     );
   }
 }

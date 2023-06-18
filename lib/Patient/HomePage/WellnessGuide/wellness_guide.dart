@@ -16,7 +16,7 @@ class WellnessGuide extends StatelessWidget {
       
       ),
       
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: MenuList(),
       ),
       

@@ -3,7 +3,6 @@ import 'package:lunan/Therapist/HomePage/ViewPatient/create_casenotes.dart';
 import 'package:lunan/Therapist/HomePage/ViewPatient/patient_casenotes.dart';
 import 'package:lunan/Therapist/HomePage/ViewPatient/patient_list.dart';
 import 'package:lunan/Therapist/MenuList/menulist.dart';
-import 'package:lunan/Therapist/HomePage/ViewPatient/view_casenotes.dart';
 
 class PatientInfo extends StatelessWidget {
   const PatientInfo({super.key});
@@ -16,7 +15,7 @@ class PatientInfo extends StatelessWidget {
         backgroundColor: const Color(0xff7DB9B6),
       ),
 
-      endDrawer: Drawer(
+      drawer: Drawer(
         child: MenuListT(),
       ),
 
